@@ -23,6 +23,8 @@ class BodyItem extends React.Component {
 
 const styles={
   touchOp:{
+      width: 100,
+      height: 400,
     alignItems:'center'
   },
   image:{

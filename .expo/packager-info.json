@@ -1,9 +1,9 @@
 {
-  "devToolsPort": 19002,
+  "devToolsPort": 19003,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 45270,
+  "packagerPid": 46792,
   "expoServerNgrokUrl": "https://5a-2fc.anonymous.smallfitv2.exp.direct",
   "packagerNgrokUrl": "https://packager.5a-2fc.anonymous.smallfitv2.exp.direct",
-  "ngrokPid": 45278
+  "ngrokPid": 46806
 }

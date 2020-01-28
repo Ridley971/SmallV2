@@ -1,9 +1,14 @@
 import React from 'react'
 import {StyleSheet, View, Text,Button,Image,TouchableOpacity } from 'react-native'
+import { connect } from 'react-redux'
 
 class Step2 extends React.Component {
-  _NextStep() {
+  _NextStep(sexe) {
+
+    const action = { type: "TOGGLE_SEXE", value: sexe }
+    this.props.dispatch(action)
     this.props.navigation.navigate("Step3")
+
    }
 
   render()
@@ -12,15 +17,16 @@ class Step2 extends React.Component {
       <View style={styles.main_container} >
         <Text style={styles.text_Title}>Quel est votre Sexe ?</Text>
         <View style={styles.gender_container}>
-          <TouchableOpacity style={styles.touchMale}
-          onPress={() => {this._NextStep()}}>
+          <TouchableOpacity
+          style={styles.touchMale}
+          onPress={() => {this._NextStep("M")}}>
           <Image
               style={{width: 100, height: 100}}
               source={require('../../assets/gender-Male.jpg')}
                 />
           </TouchableOpacity>
           <TouchableOpacity style={styles.touchFemale}
-           onPress={() => {this._NextStep()}}>
+           onPress={() => {this._NextStep("F")}}>
 
           <Image
               style={{width: 100, height: 100}}
@@ -33,9 +39,6 @@ class Step2 extends React.Component {
     )
   }
 }
-
-export default Step2
-
 const styles={
   main_container:{
     flex:1,
@@ -61,3 +64,8 @@ const styles={
     backgroundColor:'pink'
   }
 }
+
+const mapStateToProps = (state) => {
+  return state
+}
+export default connect(mapStateToProps)(Step2)
