@@ -1,10 +1,16 @@
 import React from 'react'
 import {StyleSheet,View, Text, Image, ScrollView,Button, TouchableOpacity} from 'react-native'
+import bodies from "../../Helpers/body-percent"
+import BodiesList from "../BodiesList"
+
 class Step6 extends React.Component {
   render() {
     return (
       <View style={styles.main_container}>
         <Text style={styles.text_Title}> Quelle est votre taux de graisse corporelle ?</Text>
+
+
+        <BodiesList bodies ={bodies}/>
 
         <TouchableOpacity
             style={styles.touchButton}

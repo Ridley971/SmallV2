@@ -1,11 +1,16 @@
 import React from 'react'
-import {StyleSheet,View, Text, Image, ScrollView,Button} from 'react-native'
+import {StyleSheet,View, Text, Image, TouchableOpacity,Button, FlatList} from 'react-native'
+import bodies from '../../Helpers/body-percent'
+import BodiesList from "../BodiesList"
 
 class Step7 extends React.Component {
+
   render() {
     return(
       <View style={styles.main_container}>
-        <Text style={styles.text_Title}> Quelle est votre taux de graisse corporelle ?</Text>
+        <Text style={styles.text_Title}> Quelle est votre cible taux de graisse corporelle ?</Text>
+
+        <BodiesList bodies ={bodies}/>
 
         <TouchableOpacity
             style={styles.touchButton}
@@ -19,6 +24,16 @@ class Step7 extends React.Component {
 }
 
 const styles={
+  item: {
+    backgroundColor: '#f9c2ff',
+    padding: 20,
+    marginVertical: 8,
+    marginHorizontal: 16,
+  },
+  title: {
+    fontSize: 32,
+  },
+
   main_container:{
     flex:1,
     backgroundColor:'black'
