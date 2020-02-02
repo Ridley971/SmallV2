@@ -16,6 +16,7 @@ import Step7 from '../Components/Steps/Step7'
 import Step8 from '../Components/Steps/Step8'
 import Profil from '../Components/Profil'
 import Formule from '../Components/Formule'
+import FormuleItem from '../Components/FormuleItem'
 
 
 const StepsStackNavigator = createStackNavigator({
@@ -69,7 +70,7 @@ const StepsStackNavigator = createStackNavigator({
   Step8: {
     screen: Step8,
     navigationOptions: {
-      title: 'Step8'
+      headerLeft:() => null
     }
   }
 })

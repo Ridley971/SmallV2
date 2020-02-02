@@ -8,9 +8,10 @@ export default class App extends React.Component {
   {
     return (
       <Provider store={Store}>
-        <Navigation/>
+
+        <Navigation />
       </Provider>
- 
+
     )
   }
 }
